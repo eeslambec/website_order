@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ApexGoods — Premium Lifestyle & Tech Accessories</title>
+  <meta name="description" content="Discover curated lifestyle and tech accessories at ApexGoods. Shop audio, smart wearables, office gear, and charging solutions." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%234f46e5'/><text x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' fill='white' font-size='18' font-weight='bold' font-family='sans-serif'>A</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#" class="brand" aria-label="ApexGoods home">
+        <div class="brand__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+            <line x1="12" y1="22" x2="12" y2="15.5"/>
+            <polyline points="22 8.5 12 15.5 2 8.5"/>
+          </svg>
+        </div>
+        ApexGoods
+      </a>
+
+      <nav class="nav-desktop" id="navDesktop">
+        <a href="#hero" class="active" data-nav="hero" data-i18n="nav_home">Home</a>
+        <a href="#catalog" data-nav="catalog" data-i18n="nav_catalog">Catalog</a>
+        <a href="#about" data-nav="about" data-i18n="nav_about">About Us</a>
+        <a href="#contacts" data-nav="contacts" data-i18n="nav_contacts">Contacts</a>
+      </nav>
+
+      <div class="search-bar" id="searchBar">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="Search products…" autocomplete="off" />
+      </div>
+
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+      </div>
+
+      <button class="search-toggle" id="searchToggle" aria-label="Toggle search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Search Bar -->
+  <div class="mobile-search" id="mobileSearch">
+    <div class="container">
+      <div class="search-bar mobile">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="mobileSearchInput" data-i18n-placeholder="search_placeholder" placeholder="Search products…" autocomplete="off" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#hero" data-nav="hero" data-i18n="nav_home">Home</a>
+    <a href="#catalog" data-nav="catalog" data-i18n="nav_catalog">Catalog</a>
+    <a href="#about" data-nav="about" data-i18n="nav_about">About Us</a>
+    <a href="#contacts" data-nav="contacts" data-i18n="nav_contacts">Contacts</a>
+    <div class="lang-switcher mobile-lang-switcher" id="mobileLangSwitcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    <div class="container">
+      <div class="hero__tag">
+        <span class="hero__tag-pulse"></span>
+        <span data-i18n="hero_tag_new">New arrivals</span> — <span data-i18n="hero_tag_sub">fresh drops every week</span>
+      </div>
+      <h1 data-i18n="hero_title">Elevate Your Everyday with Premium Tech Accessories</h1>
+      <p data-i18n="hero_desc">Curated gear for the modern lifestyle. From studio-grade audio to smart wearables — discover products that blend form and function.</p>
+      <a href="#catalog" class="hero__cta">
+        <span data-i18n="hero_cta">Explore Catalog</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+
+      <!-- Feature badges -->
+      <div class="hero__features">
+        <div class="hero__feature">
+          <div class="hero__feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 5.5 20 16.5 16 14 16 8"/>
+            </svg>
+          </div>
+          <span data-i18n="feature_shipping">Free Shipping</span>
+        </div>
+        <div class="hero__feature">
+          <div class="hero__feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <span data-i18n="feature_warranty">2-Year Warranty</span>
+        </div>
+        <div class="hero__feature">
+          <div class="hero__feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5" rx="1"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
+            </svg>
+          </div>
+          <span data-i18n="feature_returns">Easy Returns</span>
+        </div>
+        <div class="hero__feature">
+          <div class="hero__feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+          </div>
+          <span data-i18n="feature_payment">Secure Payment</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATALOG ===== -->
+  <section class="catalog" id="catalog">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="catalog_tag">Our Collection</span>
+        <h2 data-i18n="catalog_title">Premium Products</h2>
+        <p data-i18n="catalog_desc">Explore our curated collection of premium tech accessories designed for modern living.</p>
+      </div>
+
+      <div class="category-tabs reveal" id="categoryTabs">
+        <button class="category-tab active" data-category="all">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          <span data-i18n="cat_all">All Products</span>
+        </button>
+        <button class="category-tab" data-category="audio">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>
+          <span data-i18n="cat_audio">Audio & Headphones</span>
+        </button>
+        <button class="category-tab" data-category="wearables">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><polyline points="12 9 12 12 13.5 13.5"/><path d="M16.51 17.35l-.35 3.83a2 2 0 01-2 1.82H9.83a2 2 0 01-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 019.83 1h4.35a2 2 0 012 1.82l.35 3.83"/></svg>
+          <span data-i18n="cat_wearables">Smart Wearables</span>
+        </button>
+        <button class="category-tab" data-category="office">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span data-i18n="cat_office">Desk & Office Gear</span>
+        </button>
+        <button class="category-tab" data-category="charging">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span data-i18n="cat_charging">Charging & Power</span>
+        </button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Products injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__content reveal">
+          <span class="section-tag" data-i18n="about_tag">Who We Are</span>
+          <h2 data-i18n="about_title">Crafted for People Who Care About Details</h2>
+          <p data-i18n="about_p1">At ApexGoods, we believe that great accessories shouldn't be an afterthought. Every product in our catalog is rigorously tested and hand-picked to ensure it meets our exacting standards of quality, design, and usability.</p>
+          <p data-i18n="about_p2">Founded in 2021, we've grown from a small curated shop into a trusted destination for thousands of discerning buyers who want products that look incredible and perform even better.</p>
+          <div class="about__stats">
+            <div class="stat-card">
+              <div class="stat-card__number">12K+</div>
+              <div class="stat-card__label" data-i18n="stat_customers">Happy customers</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__number">200+</div>
+              <div class="stat-card__label" data-i18n="stat_products">Products curated</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__number">4.9★</div>
+              <div class="stat-card__label" data-i18n="stat_rating">Average rating</div>
+            </div>
+          </div>
+        </div>
+        <div class="about__image reveal">
+          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=700&q=80" alt="Modern office workspace with tech accessories" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 700 500\' width=\'700\' height=\'500\'%3E%3Cdefs%3E%3ClinearGradient id=\'g\' x1=\'0\' y1=\'0\' x2=\'1\' y2=\'1\'%3E%3Cstop offset=\'0%25\' stop-color=\'%231e1b4b\'/%3E%3Cstop offset=\'100%25\' stop-color=\'%234338ca\'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'url(%23g)\'/%3E%3Ccircle cx=\'350\' cy=\'220\' r=\'80\' fill=\'%23818cf8\' opacity=\'0.15\'/%3E%3Ctext x=\'350\' y=\'230\' text-anchor=\'middle\' fill=\'white\' font-family=\'-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif\' font-size=\'26\' font-weight=\'bold\'%3EApexGoods Workspace%3C/text%3E%3Ctext x=\'350\' y=\'270\' text-anchor=\'middle\' fill=\'%23c7d2fe\' font-family=\'-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif\' font-size=\'15\'%3ECurated Premium Tech &amp; Lifestyle%3C/text%3E%3C/svg%3E';" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTS ===== -->
+  <section class="contacts" id="contacts">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="contacts_tag">Reach Out</span>
+        <h2 data-i18n="contacts_title">Get in Touch</h2>
+        <p data-i18n="contacts_desc">Have a question or need help? We'd love to hear from you.</p>
+      </div>
+
+      <div class="contacts__grid">
+        <div class="contacts__info reveal">
+          <h3 data-i18n="contacts_info_title">Contact Information</h3>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="contact-item__text">
+              <strong data-i18n="contact_email_label">Email</strong>
+              <span>hello@apexgoods.store</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-item__text">
+              <strong data-i18n="contact_phone_label">Phone</strong>
+              <span>+1 (555) 234-5678</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="contact-item__text">
+              <strong data-i18n="contact_hours_label">Working Hours</strong>
+              <span data-i18n="contact_hours_value">Mon — Fri: 9:00 AM – 7:00 PM<br/>Sat: 10:00 AM – 5:00 PM<br/>Sun: Closed</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contact-item__text">
+              <strong data-i18n="contact_address_label">Address</strong>
+              <span data-i18n="contact_address_value">1420 Tech Park Drive, Suite 200<br/>San Francisco, CA 94107</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <h3 data-i18n="form_title">Send Us a Message</h3>
+
+          <div class="form-group">
+            <label for="contactName" data-i18n="form_name_label">Full Name</label>
+            <input type="text" id="contactName" data-i18n-placeholder="form_name_placeholder" placeholder="John Doe" required />
+            <div class="error-msg" id="contactNameError" data-i18n="form_name_error">Please enter your name</div>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail" data-i18n="form_email_label">Email Address</label>
+            <input type="email" id="contactEmail" data-i18n-placeholder="form_email_placeholder" placeholder="john@example.com" required />
+            <div class="error-msg" id="contactEmailError" data-i18n="form_email_error">Please enter a valid email</div>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage" data-i18n="form_message_label">Message</label>
+            <textarea id="contactMessage" data-i18n-placeholder="form_message_placeholder" placeholder="How can we help?" required></textarea>
+            <div class="error-msg" id="contactMessageError" data-i18n="form_message_error">Please enter a message</div>
+          </div>
+          <button type="submit" class="btn-primary" id="contactSubmitBtn">
+            <span data-i18n="form_submit">Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">ApexGoods</div>
+          <p class="footer__desc" data-i18n="footer_desc">Premium lifestyle and tech accessories, curated for people who care about quality and design.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 data-i18n="footer_shop">Shop</h4>
+          <ul>
+            <li><a href="#catalog" data-i18n="cat_audio">Audio & Headphones</a></li>
+            <li><a href="#catalog" data-i18n="cat_wearables">Smart Wearables</a></li>
+            <li><a href="#catalog" data-i18n="cat_office">Desk & Office Gear</a></li>
+            <li><a href="#catalog" data-i18n="cat_charging">Charging & Power</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer_company">Company</h4>
+          <ul>
+            <li><a href="#about" data-i18n="nav_about">About Us</a></li>
+            <li><a href="#contacts" data-i18n="nav_contacts">Contacts</a></li>
+            <li><a href="#" data-i18n="footer_careers">Careers</a></li>
+            <li><a href="#" data-i18n="footer_press">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer_support">Support</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer_help">Help Center</a></li>
+            <li><a href="#" data-i18n="footer_shipping">Shipping</a></li>
+            <li><a href="#" data-i18n="footer_returns">Returns</a></li>
+            <li><a href="#" data-i18n="footer_warranty">Warranty</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer_copyright">© 2026 ApexGoods. All rights reserved.</span>
+        <span data-i18n="footer_designed">Designed with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__header">
+      <h3><span data-i18n="cart_title">Your Cart</span> (<span id="cartCount">0</span>)</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-drawer__body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <div class="cart-empty__icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".4">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+        </div>
+        <p data-i18n="cart_empty_html">Your cart is empty.<br/>Start shopping to add items!</p>
+      </div>
+    </div>
+    <div class="cart-drawer__footer" id="cartFooter" style="display:none;">
+      <div class="cart-summary">
+        <div class="cart-summary__row">
+          <span data-i18n="cart_subtotal">Subtotal</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="cart-summary__row">
+          <span data-i18n="cart_shipping_label">Shipping</span>
+          <span id="cartShipping" data-i18n="cart_shipping_free">Free</span>
+        </div>
+        <div class="cart-summary__row total">
+          <span data-i18n="cart_total">Total</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn" data-i18n="cart_checkout">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ===== CHECKOUT MODAL ===== -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal">
+      <div class="modal__header">
+        <h3 id="modalTitle" data-i18n="checkout_title">Checkout</h3>
+        <button class="modal__close" id="modalClose" aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__step-indicator" id="stepIndicator">
+        <div class="step-dot active" data-step="1"></div>
+        <div class="step-dot" data-step="2"></div>
+        <div class="step-dot" data-step="3"></div>
+      </div>
+
+      <!-- Step 1: Contact Details -->
+      <div class="checkout-step active" id="step1">
+        <h4 data-i18n="checkout_contact">Contact Details</h4>
+        <div class="form-group">
+          <label for="checkoutName" data-i18n="form_name_label">Full Name</label>
+          <input type="text" id="checkoutName" data-i18n-placeholder="form_name_placeholder" placeholder="John Doe" />
+          <div class="error-msg" id="checkoutNameError" data-i18n="form_name_error">Please enter your name</div>
+        </div>
+        <div class="form-group">
+          <label for="checkoutPhone" data-i18n="checkout_phone_label">Phone Number</label>
+          <input type="tel" id="checkoutPhone" data-i18n-placeholder="checkout_phone_placeholder" placeholder="+1 (555) 000-0000" />
+          <div class="error-msg" id="checkoutPhoneError" data-i18n="checkout_phone_error">Please enter a valid phone number</div>
+        </div>
+        <div class="form-group">
+          <label for="checkoutEmail" data-i18n="form_email_label">Email Address</label>
+          <input type="email" id="checkoutEmail" data-i18n-placeholder="form_email_placeholder" placeholder="john@example.com" />
+          <div class="error-msg" id="checkoutEmailError" data-i18n="form_email_error">Please enter a valid email</div>
+        </div>
+        <div class="checkout-nav">
+          <button class="btn-primary" id="step1Next" data-i18n="checkout_continue_delivery">Continue to Delivery →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Delivery & Payment -->
+      <div class="checkout-step" id="step2">
+        <h4 data-i18n="checkout_delivery_title">Delivery Method</h4>
+        <div class="radio-group" id="deliveryGroup">
+          <label class="radio-card selected" data-value="standard">
+            <input type="radio" name="delivery" value="standard" checked />
+            <div class="radio-dot"></div>
+            <div class="radio-card__icon">🚚</div>
+            <div class="radio-card__text">
+              <strong data-i18n="delivery_standard">Standard Courier</strong>
+              <span data-i18n="delivery_standard_desc">3-5 business days · Free</span>
+            </div>
+          </label>
+          <label class="radio-card" data-value="express">
+            <input type="radio" name="delivery" value="express" />
+            <div class="radio-dot"></div>
+            <div class="radio-card__icon">⚡</div>
+            <div class="radio-card__text">
+              <strong data-i18n="delivery_express">Express Delivery</strong>
+              <span data-i18n="delivery_express_desc">1-2 business days · $9.99</span>
+            </div>
+          </label>
+          <label class="radio-card" data-value="pickup">
+            <input type="radio" name="delivery" value="pickup" />
+            <div class="radio-dot"></div>
+            <div class="radio-card__icon">🏬</div>
+            <div class="radio-card__text">
+              <strong data-i18n="delivery_pickup">Store Pickup</strong>
+              <span data-i18n="delivery_pickup_desc">Available same day · Free</span>
+            </div>
+          </label>
+        </div>
+
+        <h4 data-i18n="checkout_payment_title">Payment Method</h4>
+        <div class="radio-group" id="paymentGroup">
+          <label class="radio-card selected" data-value="card">
+            <input type="radio" name="payment" value="card" checked />
+            <div class="radio-dot"></div>
+            <div class="radio-card__icon">💳</div>
+            <div class="radio-card__text">
+              <strong data-i18n="payment_card">Credit / Debit Card</strong>
+              <span data-i18n="payment_card_desc">Visa, Mastercard, Amex</span>
+            </div>
+          </label>
+          <label class="radio-card" data-value="cod">
+            <input type="radio" name="payment" value="cod" />
+            <div class="radio-dot"></div>
+            <div class="radio-card__icon">💵</div>
+            <div class="radio-card__text">
+              <strong data-i18n="payment_cod">Cash on Delivery</strong>
+              <span data-i18n="payment_cod_desc">Pay when you receive</span>
+            </div>
+          </label>
+          <label class="radio-card" data-value="apple">
+            <input type="radio" name="payment" value="apple" />
+            <div class="radio-dot"></div>
+            <div class="radio-card__icon">🍎</div>
+            <div class="radio-card__text">
+              <strong data-i18n="payment_apple">Apple Pay</strong>
+              <span data-i18n="payment_apple_desc">Quick and secure (Demo)</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="checkout-nav">
+          <button class="btn-secondary" id="step2Back" data-i18n="checkout_back">← Back</button>
+          <button class="btn-primary" id="step2Next" data-i18n="checkout_place_order">Place Order →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Confirmation -->
+      <div class="checkout-step" id="step3">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <svg class="toast__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+    <span class="toast__text"></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
